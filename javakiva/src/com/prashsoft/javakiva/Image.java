@@ -29,10 +29,10 @@
 package com.prashsoft.javakiva;
 
 public class Image {
-	
-	/* Just using a simple String array for image templates for now */
-	private static final String[] imageTemplate = {"http://www.kiva.org/img/"};
-	
+
+    /* Just using a simple String array for image templates for now */
+    private static final String[] imageTemplate = { "http://www.kiva.org/img/" };
+
     /* Id */
     private int id;
 
@@ -46,12 +46,19 @@ public class Image {
      * Default Constructor
      */
     public Image() {
+    }
 
+    /**
+     * Parameterized Constructor
+     */
+    public Image(int id, int templateId) {
+        this.id = id;
+        this.templateId = templateId;
     }
 
     /**
      * Get Id
-     *
+     * 
      * @return id - Id - int
      * @see int
      */
@@ -61,22 +68,21 @@ public class Image {
 
     /**
      * Get Image Url
-     *
+     * 
      * @return imageUrl - Image Url - String
      * @see String
      */
     public String getImageUrl(int width) {
-    	if (imageUrl==null)
-    		return imageTemplate[this.templateId - 1] 
-    		                     + "/w" + width 
-    		                     + "/" + this.id + ".jpg";
-    	else
-    		return this.imageUrl;
+        if (imageUrl == null)
+            return imageTemplate[this.templateId - 1] + "/w" + width + "/"
+                    + this.id + ".jpg";
+        else
+            return this.imageUrl;
     }
 
     /**
      * Get Template Id
-     *
+     * 
      * @return templateId - Template Id - int
      * @see int
      */
@@ -86,8 +92,9 @@ public class Image {
 
     /**
      * Set Id
-     *
-     * @param id - Id - int
+     * 
+     * @param id
+     *            - Id - int
      * @see int
      */
     public void setId(int id) {
@@ -96,8 +103,9 @@ public class Image {
 
     /**
      * Set Image Url
-     *
-     * @param imageUrl - Image Url - String
+     * 
+     * @param imageUrl
+     *            - Image Url - String
      * @see String
      */
     public void setImageUrl(String imageUrl) {
@@ -106,24 +114,24 @@ public class Image {
 
     /**
      * Set Template Id
-     *
-     * @param templateId - Template Id - int
+     * 
+     * @param templateId
+     *            - Template Id - int
      * @see int
      */
     public void setTemplateId(int templateId) {
         this.templateId = templateId;
     }
 
-
     /**
      * To String
-     *
-     * @return  toString Of Attributes
+     * 
+     * @return toString Of Attributes
      * @see String
      */
     @Override
     public String toString() {
-	   return "";
-    }   
+        return "";
+    }
 
 }
