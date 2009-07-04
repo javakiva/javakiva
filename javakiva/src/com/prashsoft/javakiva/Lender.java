@@ -74,7 +74,7 @@ public class Lender {
 
     /**
      * Get Country Code
-     *
+     * 
      * @return countryCode - Country Code - String
      * @see String
      */
@@ -84,7 +84,7 @@ public class Lender {
 
     /**
      * Get Image
-     *
+     * 
      * @return image - Image - String
      * @see String
      */
@@ -94,7 +94,7 @@ public class Lender {
 
     /**
      * Get Invitee Count
-     *
+     * 
      * @return inviteeCount - Invitee Count - int
      * @see int
      */
@@ -104,7 +104,7 @@ public class Lender {
 
     /**
      * Get Lender Id
-     *
+     * 
      * @return lenderId - Lender Id - String
      * @see String
      */
@@ -114,7 +114,7 @@ public class Lender {
 
     /**
      * Get Loan Because
-     *
+     * 
      * @return loanBecause - Loan Because - String
      * @see String
      */
@@ -124,7 +124,7 @@ public class Lender {
 
     /**
      * Get Loan Count
-     *
+     * 
      * @return loanCount - Loan Count - int
      * @see int
      */
@@ -134,7 +134,7 @@ public class Lender {
 
     /**
      * Get Member Since
-     *
+     * 
      * @return memberSince - Member Since - Date
      * @see Date
      */
@@ -144,7 +144,7 @@ public class Lender {
 
     /**
      * Get Name
-     *
+     * 
      * @return name - Name - String
      * @see String
      */
@@ -154,7 +154,7 @@ public class Lender {
 
     /**
      * Get Occupational Info
-     *
+     * 
      * @return occupationalInfo - Occupational Info - String
      * @see String
      */
@@ -164,7 +164,7 @@ public class Lender {
 
     /**
      * Get Personal Url
-     *
+     * 
      * @return personalUrl - Personal Url - String
      * @see String
      */
@@ -174,7 +174,7 @@ public class Lender {
 
     /**
      * Get Whereabouts
-     *
+     * 
      * @return whereabouts - Whereabouts - String
      * @see String
      */
@@ -184,8 +184,9 @@ public class Lender {
 
     /**
      * Set Country Code
-     *
-     * @param countryCode - Country Code - String
+     * 
+     * @param countryCode
+     *            - Country Code - String
      * @see String
      */
     public void setCountryCode(String countryCode) {
@@ -194,8 +195,9 @@ public class Lender {
 
     /**
      * Set Image
-     *
-     * @param image - Image - String
+     * 
+     * @param image
+     *            - Image - String
      * @see String
      */
     public void setImage(Image image) {
@@ -204,8 +206,9 @@ public class Lender {
 
     /**
      * Set Invitee Count
-     *
-     * @param inviteeCount - Invitee Count - int
+     * 
+     * @param inviteeCount
+     *            - Invitee Count - int
      * @see int
      */
     public void setInviteeCount(int inviteeCount) {
@@ -214,8 +217,9 @@ public class Lender {
 
     /**
      * Set Lender Id
-     *
-     * @param lenderId - Lender Id - String
+     * 
+     * @param lenderId
+     *            - Lender Id - String
      * @see String
      */
     public void setLenderId(String lenderId) {
@@ -224,8 +228,9 @@ public class Lender {
 
     /**
      * Set Loan Because
-     *
-     * @param loanBecause - Loan Because - String
+     * 
+     * @param loanBecause
+     *            - Loan Because - String
      * @see String
      */
     public void setLoanBecause(String loanBecause) {
@@ -234,8 +239,9 @@ public class Lender {
 
     /**
      * Set Loan Count
-     *
-     * @param loanCount - Loan Count - int
+     * 
+     * @param loanCount
+     *            - Loan Count - int
      * @see int
      */
     public void setLoanCount(int loanCount) {
@@ -244,8 +250,9 @@ public class Lender {
 
     /**
      * Set Member Since
-     *
-     * @param memberSince - Member Since - Date
+     * 
+     * @param memberSince
+     *            - Member Since - Date
      * @see Date
      */
     public void setMemberSince(Date memberSince) {
@@ -254,8 +261,9 @@ public class Lender {
 
     /**
      * Set Name
-     *
-     * @param name - Name - String
+     * 
+     * @param name
+     *            - Name - String
      * @see String
      */
     public void setName(String name) {
@@ -264,8 +272,9 @@ public class Lender {
 
     /**
      * Set Occupational Info
-     *
-     * @param occupationalInfo - Occupational Info - String
+     * 
+     * @param occupationalInfo
+     *            - Occupational Info - String
      * @see String
      */
     public void setOccupationalInfo(String occupationalInfo) {
@@ -274,8 +283,9 @@ public class Lender {
 
     /**
      * Set Personal Url
-     *
-     * @param personalUrl - Personal Url - String
+     * 
+     * @param personalUrl
+     *            - Personal Url - String
      * @see String
      */
     public void setPersonalUrl(String personalUrl) {
@@ -284,32 +294,32 @@ public class Lender {
 
     /**
      * Set Whereabouts
-     *
-     * @param whereabouts - Whereabouts - String
+     * 
+     * @param whereabouts
+     *            - Whereabouts - String
      * @see String
      */
     public void setWhereabouts(String whereabouts) {
         this.whereabouts = whereabouts;
     }
 
-
     /**
      * To String
-     *
-     * @return  toString Of Attributes
+     * 
+     * @return toString Of Attributes
      * @see String
      */
     @Override
     public String toString() {
-	   return ""
- + " Lender Id: " + lenderId; 
+        return "" + " Lender Id: " + lenderId;
 
-    }   
+    }
 
 }
 
-/***************************** <Version Control Log> *****************************
- *
+/*****************************
+ * <Version Control Log> *****************************
+ * 
  * $Log: $
- *
+ * 
  */
