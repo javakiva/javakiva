@@ -1,18 +1,18 @@
 /*
- * Lender.java: The Kiva Image Object
+ * Image.java: The Kiva Image Object
  * 
  * Copyright (C) 2009 prashsoft.com
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * version 2 as published by the Free Software Foundation:
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * http://www.gnu.org/licenses/gpl-2.0.html
  * 
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License version 2 for more details:
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * http://www.gnu.org/licenses/gpl-2.0.html
  * 
  * You should have received a copy of the GNU General Public License
  * version 2 along with this program; if not, write to the
@@ -23,30 +23,34 @@
 
 package com.prashsoft.javakiva;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Image {
 
     /* Just using a simple String array for image templates for now */
-    private static final String[] imageTemplate = { "http://www.kiva.org/img/" };
+    private static Map imageTemplate = new HashMap();
 
     /* Id */
-    private int id;
+    private String id;
 
     /* Image Url */
     private String imageUrl;
 
     /* Template Id */
-    private int templateId;
+    private String templateId;
 
     /**
      * Default Constructor
      */
     public Image() {
+        imageTemplate.put("1", "http://www.kiva.org/img");
     }
 
     /**
      * Parameterized Constructor
      */
-    public Image(int id, int templateId) {
+    public Image(String id, String templateId) {
         this.id = id;
         this.templateId = templateId;
     }
@@ -54,10 +58,10 @@ public class Image {
     /**
      * Get Id
      * 
-     * @return id - Id - int
-     * @see int
+     * @return id - Id - String
+     * @see String
      */
-    public int getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -67,9 +71,19 @@ public class Image {
      * @return imageUrl - Image Url - String
      * @see String
      */
-    public String getImageUrl(int width) {
+    public String getImageUrl() {
+        return getImageUrl("800");
+    }
+
+    /**
+     * Get Image Url
+     * 
+     * @return imageUrl - Image Url - String
+     * @see String
+     */
+    public String getImageUrl(String width) {
         if (imageUrl == null)
-            return imageTemplate[this.templateId - 1] + "/w" + width + "/"
+            return imageTemplate.get(this.templateId) + "/w" + width + "/"
                     + this.id + ".jpg";
         else
             return this.imageUrl;
@@ -78,10 +92,10 @@ public class Image {
     /**
      * Get Template Id
      * 
-     * @return templateId - Template Id - int
-     * @see int
+     * @return templateId - Template Id - String
+     * @see String
      */
-    public int getTemplateId() {
+    public String getTemplateId() {
         return this.templateId;
     }
 
@@ -89,10 +103,10 @@ public class Image {
      * Set Id
      * 
      * @param id
-     *            - Id - int
-     * @see int
+     *            - Id - String
+     * @see String
      */
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -111,10 +125,10 @@ public class Image {
      * Set Template Id
      * 
      * @param templateId
-     *            - Template Id - int
-     * @see int
+     *            - Template Id - String
+     * @see String
      */
-    public void setTemplateId(int templateId) {
+    public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
 
