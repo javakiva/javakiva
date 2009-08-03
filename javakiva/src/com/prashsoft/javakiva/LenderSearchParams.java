@@ -1,5 +1,5 @@
 /*
- * LenderSearchParam.java: The Lender Search Param Object
+ * LenderSearchParams.java: The Lender Search Params Object
  * 
  * Copyright (C) 2009 prashsoft.com
  * 
@@ -32,7 +32,7 @@ public class LenderSearchParams {
     private String occupation;
 
     /* Page Num */
-    private int pageNum;
+    private Integer pageNum;
 
     /* Q */
     private String q;
@@ -50,17 +50,17 @@ public class LenderSearchParams {
     /**
      * Parameterized Constructor
      */
-    public LenderSearchParams(String q, String occupation, String countryCode, String sortBy, int pageNum) {
-    	this.q = q;
-    	this.occupation = occupation;
-    	this.countryCode = countryCode;
-    	this.sortBy = sortBy;
-    	this.pageNum = pageNum;
+    public LenderSearchParams(String q, String occupation, String countryCode, String sortBy, Integer pageNum) {
+        this.q = q;
+        this.occupation = occupation;
+        this.countryCode = countryCode;
+        this.sortBy = sortBy;
+        this.pageNum = pageNum;
     }
 
     /**
      * Get Country Code
-     *
+     * 
      * @return countryCode - Country Code - String
      * @see String
      */
@@ -70,7 +70,7 @@ public class LenderSearchParams {
 
     /**
      * Get Occupation
-     *
+     * 
      * @return occupation - Occupation - String
      * @see String
      */
@@ -80,16 +80,37 @@ public class LenderSearchParams {
 
     /**
      * Get Page Num
-     *
-     * @return pageNum - Page Num - int
+     * 
+     * @return pageNum - Page Num - Integer
      */
-    public int getPageNum() {
+    public Integer getPageNum() {
         return this.pageNum;
+    }
+
+    public String getParamString() {
+
+        String params = "";
+
+        if (q != null)
+            params = "q=" + q;
+        else if (occupation != null)
+            params = "occupation=" + occupation;
+
+        if (countryCode != null)
+            params += (params.equals("") ? "" : "&") + "country_code=" + countryCode;
+
+        if (sortBy != null)
+            params += (params.equals("") ? "" : "&") + "sort_by=" + sortBy;
+
+        params += (params.equals("") ? "" : "&") + "page=" + pageNum;
+
+        return params;
+
     }
 
     /**
      * Get Q
-     *
+     * 
      * @return q - Q - String
      * @see String
      */
@@ -99,7 +120,7 @@ public class LenderSearchParams {
 
     /**
      * Get Sort By
-     *
+     * 
      * @return sortBy - Sort By - String
      * @see String
      */
@@ -109,8 +130,9 @@ public class LenderSearchParams {
 
     /**
      * Set Country Code
-     *
-     * @param countryCode - Country Code - String
+     * 
+     * @param countryCode
+     *            - Country Code - String
      * @see String
      */
     public void setCountryCode(String countryCode) {
@@ -119,8 +141,9 @@ public class LenderSearchParams {
 
     /**
      * Set Occupation
-     *
-     * @param occupation - Occupation - String
+     * 
+     * @param occupation
+     *            - Occupation - String
      * @see String
      */
     public void setOccupation(String occupation) {
@@ -129,18 +152,20 @@ public class LenderSearchParams {
 
     /**
      * Set Page Num
-     *
-     * @param pageNum - Page Num - int
-     * @see int
+     * 
+     * @param pageNum
+     *            - Page Num - Integer
+     * @see Integer
      */
-    public void setPageNum(int pageNum) {
+    public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
 
     /**
      * Set Q
-     *
-     * @param q - Q - String
+     * 
+     * @param q
+     *            - Q - String
      * @see String
      */
     public void setQ(String q) {
@@ -149,47 +174,26 @@ public class LenderSearchParams {
 
     /**
      * Set Sort By
-     *
-     * @param sortBy - Sort By - String
+     * 
+     * @param sortBy
+     *            - Sort By - String
      * @see String
      */
     public void setSortBy(String sortBy) {
         this.sortBy = sortBy;
     }
-    
-    public String getParamString() {
-
-    	String params = null;
-
-    	if (q!=null)
-    		params = "q="+q;
-    	else if (occupation!=null)
-    		params = "occupation="+occupation;
-    	
-    	if (countryCode!=null)
-    		params += "&country_code=" + countryCode;
-    	
-    	if (sortBy!=null)
-    		params += "&sort_by=" + sortBy;
-    	
-    	params += "&page=" + pageNum;
-    		
-    	return params;
-    	
-    }
-
 
     /**
      * To String
-     *
-     * @return  toString Of Attributes
+     * 
+     * @return toString Of Attributes
      * @see String
      */
     @Override
     public String toString() {
-	   return ""
- + " Country Code: " + countryCode + " Occupation: " + occupation + " Page: " + pageNum + " Q: " + q + " Sort By: " + sortBy; 
+        return "" + " Country Code: " + countryCode + " Occupation: " + occupation + " Page: " + pageNum + " Q: " + q
+                + " Sort By: " + sortBy;
 
-    }   
+    }
 
 }
