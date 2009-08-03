@@ -1,5 +1,5 @@
 /*
- * Lender.java: The Kiva Lender Object
+ * Lender.java: The Lender Object
  * 
  * Copyright (C) 2009 prashsoft.com
  * 
@@ -34,7 +34,7 @@ public class Lender {
     private Image image;
 
     /* Invitee Count */
-    private int inviteeCount;
+    private Integer inviteeCount;
 
     /* Lender Id */
     private String lenderId;
@@ -43,7 +43,7 @@ public class Lender {
     private String loanBecause;
 
     /* Loan Count */
-    private int loanCount;
+    private Integer loanCount;
 
     /* Member Since */
     private Date memberSince;
@@ -51,11 +51,17 @@ public class Lender {
     /* Name */
     private String name;
 
+    /* Occupation */
+    private String occupation;
+
     /* Occupational Info */
     private String occupationalInfo;
 
     /* Personal Url */
     private String personalUrl;
+
+    /* UID */
+    private String uid;
 
     /* Whereabouts */
     private String whereabouts;
@@ -90,10 +96,10 @@ public class Lender {
     /**
      * Get Invitee Count
      * 
-     * @return inviteeCount - Invitee Count - int
-     * @see int
+     * @return inviteeCount - Invitee Count - Integer
+     * @see Integer
      */
-    public int getInviteeCount() {
+    public Integer getInviteeCount() {
         return this.inviteeCount;
     }
 
@@ -120,10 +126,10 @@ public class Lender {
     /**
      * Get Loan Count
      * 
-     * @return loanCount - Loan Count - int
-     * @see int
+     * @return loanCount - Loan Count - Integer
+     * @see Integer
      */
-    public int getLoanCount() {
+    public Integer getLoanCount() {
         return this.loanCount;
     }
 
@@ -148,6 +154,16 @@ public class Lender {
     }
 
     /**
+     * Get occupation
+     * 
+     * @return occupation - occupation - String
+     * @see String
+     */
+    public String getOccupation() {
+        return occupation;
+    }
+
+    /**
      * Get Occupational Info
      * 
      * @return occupationalInfo - Occupational Info - String
@@ -165,6 +181,16 @@ public class Lender {
      */
     public String getPersonalUrl() {
         return this.personalUrl;
+    }
+
+    /**
+     * Get uid
+     * 
+     * @return uid - uid - String
+     * @see String
+     */
+    public String getUid() {
+        return uid;
     }
 
     /**
@@ -203,10 +229,10 @@ public class Lender {
      * Set Invitee Count
      * 
      * @param inviteeCount
-     *            - Invitee Count - int
-     * @see int
+     *            - Invitee Count - Integer
+     * @see Integer
      */
-    public void setInviteeCount(int inviteeCount) {
+    public void setInviteeCount(Integer inviteeCount) {
         this.inviteeCount = inviteeCount;
     }
 
@@ -236,10 +262,10 @@ public class Lender {
      * Set Loan Count
      * 
      * @param loanCount
-     *            - Loan Count - int
-     * @see int
+     *            - Loan Count - Integer
+     * @see Integer
      */
-    public void setLoanCount(int loanCount) {
+    public void setLoanCount(Integer loanCount) {
         this.loanCount = loanCount;
     }
 
@@ -266,6 +292,17 @@ public class Lender {
     }
 
     /**
+     * Set occupation
+     * 
+     * @param occupation
+     *            - occupation - String
+     * @see String
+     */
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    /**
      * Set Occupational Info
      * 
      * @param occupationalInfo
@@ -288,6 +325,17 @@ public class Lender {
     }
 
     /**
+     * Set uid
+     * 
+     * @param uid
+     *            - uid - String
+     * @see String
+     */
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    /**
      * Set Whereabouts
      * 
      * @param whereabouts
@@ -306,12 +354,11 @@ public class Lender {
      */
     @Override
     public String toString() {
-        return "\nCountry Code: " + countryCode + "\nInvitee Count: " + inviteeCount
-                + "\nLender Id: " + lenderId + "\nLoan Because: " + loanBecause
-                + "\nLoan Count: " + loanCount + "\nMember Since: "
-                + memberSince + "\nName: " + name + "\nOccupational Info: "
-                + occupationalInfo + "\nPersonal Url: " + personalUrl
-                + "\nWhereabouts: " + whereabouts;
+        return "Lender Id: " + lenderId + "\nName: " + name + "\nImage URL: " + image.getImageUrl() + "\nWhereabouts: "
+                + whereabouts + "\nCountry Code: " + countryCode + "\nUID: " + uid + "\nMember Since: " + memberSince
+                + "\nPersonal Url: " + personalUrl + "\nOccupation: " + occupation + "\nLoan Because: " + loanBecause
+                + "\nOccupational Info: " + occupationalInfo + "\nLoan Count: " + loanCount + "\nInvitee Count: "
+                + inviteeCount;
     }
 
 }

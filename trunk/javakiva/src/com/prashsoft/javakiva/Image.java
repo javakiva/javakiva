@@ -1,5 +1,5 @@
 /*
- * Image.java: The Kiva Image Object
+ * Image.java: The Image Object
  * 
  * Copyright (C) 2009 prashsoft.com
  * 
@@ -83,8 +83,7 @@ public class Image {
      */
     public String getImageUrl(String width) {
         if (imageUrl == null)
-            return imageTemplate.get(this.templateId) + "/w" + width + "/"
-                    + this.id + ".jpg";
+            return imageTemplate.get(this.templateId) + "/w" + width + "/" + this.id + ".jpg";
         else
             return this.imageUrl;
     }
