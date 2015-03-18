@@ -1,5 +1,4 @@
 # javakiva
-Automatically exported from code.google.com/p/javakiva
 
 What is JavaKiva??
 JavaKiva? is an Open Sourced Java Wrapper for the Kiva API.
@@ -28,3 +27,5 @@ Please email javakiva @ gmail . com
 Thank you!
 
 -JavaKiva?.
+
+(Automatically exported from code.google.com/p/javakiva)
