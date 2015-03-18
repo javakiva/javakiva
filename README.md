@@ -15,9 +15,9 @@ commons-logging-1.1.1.jar (http://commons.apache.org/downloads/download_logging.
 ezmorph-1.0.6.jar (https://sourceforge.net/projects/ezmorph/files/)
 json-lib-2.2.3-jdk15.jar (https://sourceforge.net/projects/json-lib/files/)
 Where can I get more information?
-JavaKiva Homepage: http://code.google.com/p/javakiva/ 
+JavaKiva Homepage: https://github.com/javakiva/javakiva
 
-JavaKiva? GoogleGroups? page: https://github.com/javakiva/javakiva
+JavaKiva GoogleGroups page: http://groups.google.com/group/javakiva/ 
 
 Get updates about the development of JavaKiva: Follow @javakiva on twitter (http://twitter.com/javakiva)
 
